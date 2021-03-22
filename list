@@ -1,0 +1,14 @@
+
+Warning: Failed loading Zend extension '/full/path/to/opcache.so' (tried: C:\xampp\php\ext\/full/path/to/opcache.so (No se puede encontrar el módulo especificado.), C:\xampp\php\ext\php_/full/path/to/opcache.so.dll (No se puede encontrar el módulo especificado.)) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'php_mcrypt.dll' (tried: C:\xampp\php\ext\php_mcrypt.dll (No se puede encontrar el módulo especificado.), C:\xampp\php\ext\php_php_mcrypt.dll.dll (No se puede encontrar el módulo especificado.)) in Unknown on line 0
+
+                                   
+  Command "route" is not defined.  
+                                   
+  Did you mean one of these?       
+      route:cache                  
+      route:clear                  
+      route:list                   
+                                   
+
