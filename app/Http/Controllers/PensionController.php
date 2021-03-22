@@ -14,7 +14,7 @@ class PensionController extends Controller
      */
     public function index(Request $request)
     {
-        $pensiones = Pension::all();
+        $pensiones = Pension::where('pension_habilitada', 1)->get();
         return $pensiones;
     }
 
