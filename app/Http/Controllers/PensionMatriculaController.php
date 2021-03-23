@@ -52,7 +52,7 @@ class PensionMatriculaController extends Controller
             $archivo->move($ubicacion, $nombreArchivo);
         }
 
-        $datosPagoMatricula = array(
+        $datosPensionMatricula = array(
             'matricula_id' => $request->matricula_id,
             'comprobante_pension' => $nombreArchivo,
             'cantidad_pension' => $request->valor_cancelado,
@@ -61,12 +61,12 @@ class PensionMatriculaController extends Controller
             'pension_id' => $request->pension_id
         );
 
-        $pagoMatricula = PensionMatricula::create($datosPagoMatricula);
+        $pensionMatricula = PensionMatricula::create($datosPensionMatricula);
 
-        if ((!is_null($pagoMatricula))) {
-            return response()->json(['status' => $this->status_code, 'success' => true, 'message' => 'Pago Registrado Satisfactoriamente', 'data' => $pagoMatricula]);
+        if ((!is_null($pensionMatricula))) {
+            return response()->json(['status' => $this->status_code, 'success' => true, 'message' => 'Pensión Registrada Satisfactoriamente', 'data' => $pensionMatricula]);
         } else {
-            return response()->json(['status' => 'failed', 'success' => false, 'message' => 'Registro de Pago Fallido']);
+            return response()->json(['status' => 'failed', 'success' => false, 'message' => 'Registro de Pensión Fallido']);
         }
     }
 

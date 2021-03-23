@@ -42,9 +42,11 @@ Route::ApiResource('tipos-matriculas', 'TipoMatriculaController');
 Route::ApiResource('estados-matriculas', 'EstadoMatriculaController');
 Route::ApiResource('estudiantes-matriculas', 'EstudianteMatriculaController');
 Route::ApiResource('pagos', 'PagoMatriculaController');
+
 //Agregadas
-Route::ApiResource('psensiones', 'PensionMatriculaController');
+Route::ApiResource('pensiones', 'PensionMatriculaController');
 Route::ApiResource('listar-pensiones', 'PensionController');
+Route::ApiResource('aprobar-pension', 'AprobarPensionController');
 
 //Inscripcion
 Route::ApiResource('tiposangre', 'TipoSangreController');
