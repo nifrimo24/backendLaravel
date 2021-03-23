@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RechazarPensionController extends Controller
 {
@@ -68,7 +69,21 @@ class RechazarPensionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pensionMatricula = DB::table('pensiones_matriculas')
+        ->where('matricula_id', $id)
+        ->update(['estado_pension' => 'Rechazado']);
+
+        $cambio = DB::table('pensiones_matriculas')
+        ->where([
+            ['matricula_id', $id],
+            ['cursos.estado_pension', '=', 'Rechazado'],
+        ])->get();
+
+        if (!is_null($cambio)) {
+            return response()->json(['status' => $this->status_code, 'success' => true, 'message' => 'Pension Aprobada', 'pension'  => $pensionMatricula]);
+        } else {
+            return response()->json(['status' => 'failed', 'success' => false, 'message' => 'Actualización Fallido']);
+        }
     }
 
     /**
