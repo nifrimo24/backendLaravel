@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Pago;
 use Illuminate\Http\Request;
 
 class PagoController extends Controller
@@ -79,6 +80,10 @@ class PagoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Pago::destroy($id);
+        return response()->json([
+            'res' => true,
+            'message' => 'Estudiante eliminado correctamente'
+        ], 200);
     }
 }

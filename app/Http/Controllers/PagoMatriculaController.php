@@ -112,6 +112,10 @@ class PagoMatriculaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        PagoMatrícula::destroy($id);
+        return response()->json([
+            'res' => true,
+            'message' => 'Comprobante Pago eliminado correctamente'
+        ], 200);
     }
 }

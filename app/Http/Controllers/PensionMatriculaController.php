@@ -112,6 +112,10 @@ class PensionMatriculaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        PensionMatricula::destroy($id);
+        return response()->json([
+            'res' => true,
+            'message' => 'Comprobante Pensión eliminada correctamente'
+        ], 200);
     }
 }

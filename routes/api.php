@@ -48,6 +48,7 @@ Route::ApiResource('pensiones', 'PensionMatriculaController');
 Route::ApiResource('listar-pensiones', 'PensionController');
 Route::ApiResource('aprobar-pension', 'AprobarPensionController');
 Route::ApiResource('rechazar-pension', 'RechazarPensionController');
+Route::ApiResource('eliminar-pagos', 'PagoController');
 
 //Inscripcion
 Route::ApiResource('tiposangre', 'TipoSangreController');

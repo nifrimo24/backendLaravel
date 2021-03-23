@@ -247,6 +247,10 @@ class MatriculaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Matricula::destroy($id);
+        return response()->json([
+            'res' => true,
+            'message' => 'Matricula eliminada correctamente'
+        ], 200);
     }
 }

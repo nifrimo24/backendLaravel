@@ -81,6 +81,10 @@ class PensionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Pension::destroy($id);
+        return response()->json([
+            'res' => true,
+            'message' => 'Pensión eliminada correctamente'
+        ], 200);
     }
 }
