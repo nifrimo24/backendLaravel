@@ -44,7 +44,7 @@ class EstudianteController extends Controller
         ->select('matriculas.*', 'estudiantes.nombres_estudiante', 'estudiantes.apellidos_estudiante', 'estados_matricula.descripcion_estado_matricula')
         ->where([
             ['estudiantes.id_estudiante', $request->estudiante_id],
-        ])->get();
+        ])->latest()->get();
 
     return $matriculas;
      }
