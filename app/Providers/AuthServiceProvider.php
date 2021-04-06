@@ -30,6 +30,6 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::personalAccessClientId(3);
 
-        Passport::personalAccessClientSecret('yd0B5qxevfpvbFswoD9sGQr3Rxepu916pNS6NM4e');
+        Passport::personalAccessClientSecret('JgsBkqiy5QuZQd424jhxTbQQMDywkqPg0GLdILok');
     }
 }

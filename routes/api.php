@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//
 Route::post('registro', 'EstudianteController@store');
 Route::post('registro-admin', 'AdministrativoController@store');
 Route::post('auth', 'AuthController@authenticate');
@@ -31,8 +32,6 @@ Route::ApiResource('carreras', 'CarreraController');
 Route::ApiResource('admins', 'AdministrativoController');
 Route::ApiResource('cursos', 'CursoController');
 Route::ApiResource('matriculas', 'MatriculaController');
-Route::ApiResource('aprobar', 'AprobarController');
-Route::ApiResource('rechazar', 'RechazarController');
 Route::get('matriculas-estudiante', 'EstudianteController@matriculas');
 Route::ApiResource('ciclos', 'CicloAcademicoController');
 Route::ApiResource('asignaturas', 'AsignaturaController');
@@ -42,6 +41,10 @@ Route::ApiResource('tipos-matriculas', 'TipoMatriculaController');
 Route::ApiResource('estados-matriculas', 'EstadoMatriculaController');
 Route::ApiResource('estudiantes-matriculas', 'EstudianteMatriculaController');
 Route::ApiResource('pagos', 'PagoMatriculaController');
+
+//
+Route::ApiResource('aprobar', 'AprobarController');
+Route::ApiResource('rechazar', 'RechazarController');
 
 //Agregadas
 Route::ApiResource('pensiones', 'PensionMatriculaController');
