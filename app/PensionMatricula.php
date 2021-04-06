@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class PensionMatricula extends Model
 {
-    protected $table = 'pagos_matriculas';
+    protected $table = 'pensiones_matriculas';
     public $timestamps = false;
 
     protected $fillable = [

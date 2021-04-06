@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class PagoMatriculaController extends Controller
 {
+    private $status_code = 200;
     /**
      * Display a listing of the resource.
      *
